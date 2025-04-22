@@ -1,0 +1,210 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #1b1b1b;
+  color: #f1f1f1;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Glitch Text */
+.glitch-text {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  animation: glitch 1.5s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px #ff00c8, -2px -2px #00fff9;
+    transform: translate(1px, -1px);
+  }
+  20% {
+    text-shadow: -2px -2px #00fff9, 2px 2px #ff00c8;
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    text-shadow: 2px -2px #ff00c8, -2px 2px #00fff9;
+    transform: translate(1px, 1px);
+  }
+  60% {
+    text-shadow: -2px 2px #00fff9, 2px -2px #ff00c8;
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    text-shadow: 2px 2px #ff00c8, -2px -2px #00fff9;
+    transform: translate(0);
+  }
+  100% {
+    text-shadow: none;
+    transform: none;
+  }
+}
+
+header p {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.info, .about, .traits, .mint, .roadmap, .community {
+  margin: 4rem 4;
+  background: #2c2c2c;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #111;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #ff00c8;
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  color: #ddd;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* A carousel */
+
+.carousel {
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.carousel-track img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 2px solid #444;
+  background: #000;
+}
+
+.carousel-btn {
+  background: #111;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: #444;
+}
+
+/* A carousel */
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+code {
+  color: #00fff9;
+  background: #111;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.preview img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  border: 4px solid #ff00c8;
+  border-radius: 8px;
+  background-color: #000;
+}
+
+.mint-btn {
+  background: #ff00c8;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.mint-btn:hover {
+  background: #00fff9;
+  color: #111;
+}
+
+.community a {
+  color: #00fff9;
+  text-decoration: none;
+}
+
+.community a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Pixel Art Background Grid */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 0, 200, 0.05) 0px,
+    rgba(255, 0, 200, 0.05) 20px,
+    rgba(0, 255, 249, 0.05) 20px,
+    rgba(0, 255, 249, 0.05) 40px
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
